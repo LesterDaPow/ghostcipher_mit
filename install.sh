@@ -7,8 +7,8 @@ if [ -d "ghostcipher" ]; then
     git pull origin master
 else
     echo "Cloning GhostCipher repository..."
-    git clone https://github.com/LesterDaPow/ghostcipher_mit.git ghostcipher
-    cd ghostcipher
+    git clone https://github.com/LesterDaPow/ghostcipher_mit.git ~/ghostcipher
+    cd ~/ghostcipher
 fi
 
 echo "Installing GhostCipher..."
