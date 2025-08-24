@@ -1,2 +1,20 @@
-#!/bin/bash
-file gui_installer.py && python3 gui_installer.py || echo "Surry u need src"
+#!/bin/sh
+
+INSTALLER="gui_installer.py"
+
+if [ ! -f "$INSTALLER" ]; then
+    echo "Sorry! GhostCipher source not found."
+    exit 1
+fi
+
+# Try python3 first, fallback to python
+if command -v python3 >/dev/null 2>&1; then
+    PYTHON="python3"
+elif command -v python >/dev/null 2>&1; then
+    PYTHON="python"
+else
+    echo "Python is required to run GhostCipher!"
+    exit 1
+fi
+
+$PYTHON "$INSTALLER"
