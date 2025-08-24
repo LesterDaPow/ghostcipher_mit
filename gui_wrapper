@@ -1,0 +1,2 @@
+#!/bin/bash
+file gui_installer.py && python3 gui_installer.py
