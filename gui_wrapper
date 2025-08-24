@@ -1,2 +1,2 @@
 #!/bin/bash
-file gui_installer.py && python3 gui_installer.py
+file gui_installer.py && python3 gui_installer.py || echo "Surry u need src"
