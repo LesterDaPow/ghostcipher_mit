@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+ghostcipher/__init__.py
+ghostcipher.egg-info/PKG-INFO
+ghostcipher.egg-info/SOURCES.txt
+ghostcipher.egg-info/dependency_links.txt
+ghostcipher.egg-info/top_level.txt
