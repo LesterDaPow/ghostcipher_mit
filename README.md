@@ -71,4 +71,5 @@ python3 -c 'import ghostcipher; print(ghostcipher.encode("meow"))'
 ## License
 
 T̶h̶i̶s̶ p̶r̶o̶j̶e̶c̶t̶ i̶s̶ l̶i̶c̶e̶n̶s̶e̶d̶ u̶n̶d̶e̶r̶ t̶h̶e̶ M̶I̶T̶ L̶i̶c̶e̶n̶s̶e̶
+
 Previous releases were under the MIT License. As of [8/24/2025], this project is licensed under CC BY-NC-SA 4.0
