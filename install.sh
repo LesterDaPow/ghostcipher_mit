@@ -18,7 +18,7 @@ else
 fi
 
 echo "Installing GhostCipher in editable mode..."
-pip install --user -e "./$INSTALL_DIR"
+pip install --user -e "./$INSTALL_DIR/.."  # <- go up one level to repo root
 
 echo "GhostCipher installed/updated successfully!"
 echo "Test it in Python with:"
