@@ -1,17 +1,25 @@
 #!/bin/bash
-set -e
+# GhostCipher installer — updates or installs locally in editable mode
+# Professional version, safe for repeated runs
 
-if [ -d "ghostcipher" ]; then
+set -e  # Exit immediately if a command fails
+
+REPO_URL="https://github.com/LesterDaPow/ghostcipher_mit.git"
+INSTALL_DIR="ghostcipher"
+
+if [ -d "$INSTALL_DIR" ]; then
     echo "Updating existing GhostCipher repository..."
-    cd ghostcipher
+    cd "$INSTALL_DIR"
     git pull origin master
-    cd ..  # go back to repo root
+    cd ..
 else
     echo "Cloning GhostCipher repository..."
-    git clone https://github.com/LesterDaPow/ghostcipher_mit.git ghostcipher
+    git clone "$REPO_URL" "$INSTALL_DIR"
 fi
 
-echo "Installing GhostCipher..."
-pip install --user -e ./ghostcipher  # <-- install from repo root
+echo "Installing GhostCipher in editable mode..."
+pip install --user -e "./$INSTALL_DIR"
 
 echo "GhostCipher installed/updated successfully!"
+echo "Test it in Python with:"
+echo "python -c 'import ghostcipher; print(ghostcipher.encode(\"meow\"))'"
